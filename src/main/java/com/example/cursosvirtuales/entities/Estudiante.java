@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "estudiantes")
+
 public class Estudiante implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,6 +31,4 @@ public class Estudiante implements Serializable {
 
     @Column(name = "contraseña")
     private String contrasena;
-
-
 }
