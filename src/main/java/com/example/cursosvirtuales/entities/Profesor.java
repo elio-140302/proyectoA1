@@ -22,8 +22,7 @@ public class Profesor implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "idProfesor")
+    @Column(name = "idProfesor", nullable = false)
     private int idProfesor;
     @Column(name = "nombre")
     private String nombre;
