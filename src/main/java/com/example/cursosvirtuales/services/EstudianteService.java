@@ -31,13 +31,11 @@ public class EstudianteService {
     public Estudiante actualizar(Estudiante EstudianteActualizar) {
 
         Estudiante EstudianteActual = estudianteRepository.findById(EstudianteActualizar.getIdEstudiante()).get();
-
         EstudianteActual.setIdEstudiante(EstudianteActualizar.getIdEstudiante());
         EstudianteActual.setNombre(EstudianteActualizar.getNombre());
         EstudianteActual.setApellido(EstudianteActualizar.getApellido());
         EstudianteActual.setEmail(EstudianteActualizar.getEmail());
         EstudianteActual.setContrasena(EstudianteActualizar.getContrasena());
-
         Estudiante peliculaActualizado = estudianteRepository.save(EstudianteActual);
         return peliculaActualizado;
     }
