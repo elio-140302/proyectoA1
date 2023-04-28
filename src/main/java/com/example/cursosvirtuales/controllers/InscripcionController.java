@@ -1,5 +1,6 @@
 package com.example.cursosvirtuales.controllers;
 
+import com.example.cursosvirtuales.entities.Calificacion;
 import com.example.cursosvirtuales.entities.Inscripcion;
 import com.example.cursosvirtuales.services.InscripcionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +13,16 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest/inscripciones")
+@RequestMapping("/rest/inscripcion")
 public class InscripcionController {
 
     @Autowired
     private InscripcionService inscripcionService;
 
-    @GetMapping("/lista")
-    public List<Inscripcion> buscarTodo() {
-        return inscripcionService.buscarTodo();
+    @GetMapping
+    public ResponseEntity<Object> buscarTodo() {
+        List<Inscripcion> listaInscripciones = inscripcionService.buscarTodo();
+        return new ResponseEntity<Object>(listaInscripciones, HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
@@ -28,9 +30,9 @@ public class InscripcionController {
     public ResponseEntity<Object> buscarPorId(@PathVariable("id") int id) {
         Inscripcion inscripcion = inscripcionService.buscarPorId(id);
         if (inscripcion == null)
-
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "Inscripcion no encontrada,id porporcionado no es correcto");
+
         return new ResponseEntity<Object>(inscripcion, HttpStatus.OK);
 
     }

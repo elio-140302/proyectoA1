@@ -18,7 +18,6 @@ public class ProfesorService {
 
 
     public Profesor crear(Profesor profesor) {
-        profesor.setIdProfesor(0);
         return profesorRepository.save(profesor);
     }
 

@@ -13,8 +13,8 @@ import java.io.Serializable;
         @NamedQuery(name = "Calificacion.findAll", query = "SELECT c FROM Calificacion c")
         , @NamedQuery(name = "Calificacion.findByIdCalificacion", query = "SELECT c FROM Calificacion c WHERE c.idCalificacion = :idCalificacion")
         , @NamedQuery(name = "Calificacion.findByNota", query = "SELECT c FROM Calificacion c WHERE c.nota = :nota")
+        , @NamedQuery(name = "Calificacion.findByEstudiante", query = "SELECT c FROM Calificacion c WHERE c.estudiante = :estudiante")
 })
-
 
 public class Calificacion implements Serializable {
 

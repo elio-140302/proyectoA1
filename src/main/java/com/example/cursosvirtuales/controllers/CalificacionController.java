@@ -16,11 +16,11 @@ public class CalificacionController {
     @Autowired
     private CalificacionService calificacionService;
 
-    @GetMapping("/lista")
-    public List<Calificacion> buscarTodo() {
-        return calificacionService.buscarTodo();
+    @GetMapping
+    public ResponseEntity<Object> buscarTodo() {
+        List<Calificacion> listaCalificaciones = calificacionService.buscarTodo();
+        return new ResponseEntity<Object>(listaCalificaciones, HttpStatus.OK);
     }
-
     @GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public ResponseEntity<Object> buscarPorId(@PathVariable("id") int id) {

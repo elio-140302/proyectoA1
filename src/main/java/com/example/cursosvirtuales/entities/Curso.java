@@ -12,15 +12,6 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "cursos")
-@NamedQueries({
-        @NamedQuery(name = "Curso.findAll", query = "SELECT c FROM Curso c")
-        , @NamedQuery(name = "Curso.findByIdCurso", query = "SELECT c FROM Curso c WHERE c.idCurso = :idCurso")
-        , @NamedQuery(name = "Curso.findByNombre", query = "SELECT c FROM Curso c WHERE c.nombre = :nombre")
-        , @NamedQuery(name = "Curso.findByFechaInicio", query = "SELECT c FROM Curso c WHERE c.fechaInicio = :fechaInicio")
-        , @NamedQuery(name = "Curso.findByFechaFinalizacion", query = "SELECT c FROM Curso c WHERE c.fechaFinalizacion = :fechaFinalizacion")})
-
-
-
 public class Curso implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InscripcionRepository extends JpaRepository<Inscripcion, Integer> {
+public interface InscripcionRepository extends CrudRepository<Inscripcion, Integer> {
 }
