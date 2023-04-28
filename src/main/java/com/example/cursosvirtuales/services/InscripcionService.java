@@ -1,5 +1,6 @@
 package com.example.cursosvirtuales.services;
 
+import com.example.cursosvirtuales.entities.Calificacion;
 import com.example.cursosvirtuales.entities.Inscripcion;
 import com.example.cursosvirtuales.repositories.InscripcionRepository;
 import javax.transaction.Transactional;
