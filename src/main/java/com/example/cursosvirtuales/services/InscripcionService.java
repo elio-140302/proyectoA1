@@ -38,7 +38,7 @@ public class InscripcionService {
         return inscripcionActualizado;
     }
 
-    public void eliminarInscripciones(Integer id) {
+    public void eliminarInscripcion(Integer id) {
         inscripcionRepository.deleteById(id);
     }
 }
