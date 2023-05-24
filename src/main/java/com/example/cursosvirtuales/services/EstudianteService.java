@@ -32,15 +32,13 @@ public class EstudianteService {
 
         Estudiante EstudianteActual = estudianteRepository.findById(EstudianteActualizar.getIdEstudiante()).get();
 
-        //peliculaActual.setIdPelicula(peliculaActualizar.getIdPelicula());
         EstudianteActual.setIdEstudiante(EstudianteActualizar.getIdEstudiante());
         EstudianteActual.setNombre(EstudianteActualizar.getNombre());
         EstudianteActual.setApellido(EstudianteActualizar.getApellido());
         EstudianteActual.setEmail(EstudianteActualizar.getEmail());
         EstudianteActual.setContrasena(EstudianteActualizar.getContrasena());
 
-
-        Estudiante peliculaActualizado = estudianteRepository.save(EstudianteActual); // registra en base de datos
+        Estudiante peliculaActualizado = estudianteRepository.save(EstudianteActual);
         return peliculaActualizado;
     }
 

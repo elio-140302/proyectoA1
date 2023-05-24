@@ -1,6 +1,5 @@
-package com.example.cursosvirtuales.controllers;
+package com.example.cursosvirtuales.rest.controllers;
 
-import com.example.cursosvirtuales.entities.Calificacion;
 import com.example.cursosvirtuales.entities.Inscripcion;
 import com.example.cursosvirtuales.services.InscripcionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest/inscripcion")
+@RequestMapping("/rest/inscripciones")
 public class InscripcionController {
 
     @Autowired

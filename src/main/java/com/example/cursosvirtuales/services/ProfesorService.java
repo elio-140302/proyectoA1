@@ -1,7 +1,5 @@
 package com.example.cursosvirtuales.services;
 
-import com.example.cursosvirtuales.entities.Estudiante;
-import com.example.cursosvirtuales.entities.Inscripcion;
 import com.example.cursosvirtuales.entities.Profesor;
 import com.example.cursosvirtuales.repositories.ProfesorRepository;
 import jakarta.transaction.Transactional;
@@ -21,15 +19,15 @@ public class ProfesorService {
         return profesorRepository.save(profesor);
     }
 
-    public List<Profesor> buscarTodoProfesor(){
+    public List<Profesor> buscarTodo(){
         return(List<Profesor>) profesorRepository.findAll();
     }
 
-    public Profesor buscarPorIdProfesor(Integer id) {
+    public Profesor buscarPorId(Integer id) {
         return profesorRepository.findById(id).get();
     }
 
-    public Profesor actualizarProfesor(Profesor actualizarProfesor) {
+    public Profesor actualizar(Profesor actualizarProfesor) {
         Profesor actualizarProfe = profesorRepository.findById(actualizarProfesor.getIdProfesor()).get();
         actualizarProfe.setIdProfesor(actualizarProfesor.getIdProfesor());
         actualizarProfe.setNombre(actualizarProfesor.getNombre());

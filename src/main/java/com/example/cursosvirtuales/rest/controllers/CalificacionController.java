@@ -1,4 +1,4 @@
-package com.example.cursosvirtuales.controllers;
+package com.example.cursosvirtuales.rest.controllers;
 
 import com.example.cursosvirtuales.entities.Calificacion;
 import com.example.cursosvirtuales.services.CalificacionService;
@@ -8,9 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
-@RequestMapping("/rest/calificacion")
+
+@RequestMapping("/rest/calificaciones")
 @RestController
 public class CalificacionController {
     @Autowired
@@ -21,6 +21,7 @@ public class CalificacionController {
         List<Calificacion> listaCalificaciones = calificacionService.buscarTodo();
         return new ResponseEntity<Object>(listaCalificaciones, HttpStatus.OK);
     }
+    
     @GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public ResponseEntity<Object> buscarPorId(@PathVariable("id") int id) {

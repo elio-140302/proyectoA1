@@ -1,4 +1,4 @@
-package com.example.cursosvirtuales.controllers;
+package com.example.cursosvirtuales.rest.controllers;
 
 import com.example.cursosvirtuales.entities.Estudiante;
 import com.example.cursosvirtuales.services.EstudianteService;
@@ -11,7 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-@RequestMapping("/rest/estudiante")
+@RequestMapping("/rest/estudiantes")
 @RestController
 public class EstudianteController {
 

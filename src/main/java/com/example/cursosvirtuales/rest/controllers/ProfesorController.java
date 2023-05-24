@@ -1,6 +1,5 @@
-package com.example.cursosvirtuales.controllers;
+package com.example.cursosvirtuales.rest.controllers;
 
-import com.example.cursosvirtuales.entities.Estudiante;
 import com.example.cursosvirtuales.entities.Profesor;
 import com.example.cursosvirtuales.services.ProfesorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +11,14 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-@RequestMapping("/rest/profesor")
+@RequestMapping("/rest/profesores")
 @RestController
 public class ProfesorController {
 
     @Autowired
     private ProfesorService profesorService;
 
-    @GetMapping("/obtenerProfesor")
+    @GetMapping()
     public List<Profesor> buscarProfesor() {
         return profesorService.buscarTodoProfesor();
     }

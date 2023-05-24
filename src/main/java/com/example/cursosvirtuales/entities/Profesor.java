@@ -22,5 +22,5 @@ public class Profesor implements Serializable {
     @Column(name = "email")
     private String email;
     @Column(name = "contraseña")
-    private String contraseña;
+    private String contrasena;
 }
