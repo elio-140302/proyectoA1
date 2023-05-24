@@ -48,11 +48,8 @@ public class ProfesorController {
             consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }
     )
     public ResponseEntity<Object> actualizar(@PathVariable("id") int id, @RequestBody Profesor profesor){
-
         profesorService.actualizar(profesor);
         return new ResponseEntity<Object>("Profesor actualizado correctamente", HttpStatus.OK);
-
-
     }
 
     @DeleteMapping(value = "/{id}")

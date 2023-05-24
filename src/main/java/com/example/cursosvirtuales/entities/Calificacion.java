@@ -1,7 +1,6 @@
 package com.example.cursosvirtuales.entities;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
