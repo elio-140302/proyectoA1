@@ -2,7 +2,6 @@ package com.example.cursosvirtuales.services;
 
 import com.example.cursosvirtuales.entities.Curso;
 import com.example.cursosvirtuales.repositories.CursoRepository;
-
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

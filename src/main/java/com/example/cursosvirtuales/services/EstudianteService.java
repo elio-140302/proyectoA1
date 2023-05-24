@@ -30,7 +30,7 @@ public class EstudianteService {
 
     public Estudiante actualizar(Estudiante EstudianteActualizar) {
 
-        Estudiante EstudianteActual = estudianteRepository.findById(EstudianteActualizar.getIdEstudiante()).get();
+        Estudiante EstudianteActual = estudianteRepository.findById(EstudianteActualizar.getIdEstudiante()).get();	
         EstudianteActual.setIdEstudiante(EstudianteActualizar.getIdEstudiante());
         EstudianteActual.setNombre(EstudianteActualizar.getNombre());
         EstudianteActual.setApellido(EstudianteActualizar.getApellido());
