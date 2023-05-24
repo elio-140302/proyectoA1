@@ -32,7 +32,7 @@ public class ProfesorService {
         actualizarProfe.setIdProfesor(actualizarProfesor.getIdProfesor());
         actualizarProfe.setNombre(actualizarProfesor.getNombre());
         actualizarProfe.setApellido(actualizarProfesor.getApellido());
-        actualizarProfe.setContraseña(actualizarProfesor.getContraseña());
+        actualizarProfe.setContrasena(actualizarProfesor.getContrasena());
         actualizarProfe.setEmail(actualizarProfesor.getEmail());
 
         Profesor nuevoProfesor = profesorRepository.save(actualizarProfe);

@@ -24,6 +24,7 @@ public class Calificacion implements Serializable {
     @Basic(optional = false)
     @Column(name = "idCalificacion")
     private int idCalificacion;
+    
     @Basic(optional = false)
     @Column(name = "nota")
     private float nota;

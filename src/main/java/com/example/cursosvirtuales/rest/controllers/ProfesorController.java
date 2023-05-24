@@ -20,14 +20,14 @@ public class ProfesorController {
 
     @GetMapping()
     public List<Profesor> buscarProfesor() {
-        return profesorService.buscarTodoProfesor();
+        return profesorService.buscarTodo();
     }
 
 
     @GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public ResponseEntity<Object> buscarPorId(@PathVariable("id") int id){
-        Profesor profesor = profesorService.buscarPorIdProfesor(id);
+        Profesor profesor = profesorService.buscarPorId(id);
         if(profesor == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "Profesor no encontrado,id porporcionado no es correcto");
@@ -49,7 +49,7 @@ public class ProfesorController {
     )
     public ResponseEntity<Object> actualizar(@PathVariable("id") int id, @RequestBody Profesor profesor){
 
-        profesorService.actualizarProfesor(profesor);
+        profesorService.actualizar(profesor);
         return new ResponseEntity<Object>("Profesor actualizado correctamente", HttpStatus.OK);
 
 

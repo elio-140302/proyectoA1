@@ -2,10 +2,13 @@ package com.example.cursosvirtuales.services;
 
 import com.example.cursosvirtuales.entities.Curso;
 import com.example.cursosvirtuales.repositories.CursoRepository;
+
+import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 @Service
