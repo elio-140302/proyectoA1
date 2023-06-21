@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/cursos/guardar").hasAnyRole("ADMIN","CREADOR","EDITOR")
                 .antMatchers("/cursos/editar/**").hasAnyRole("ADMIN","EDITOR")
                 .antMatchers("/cursos/eliminar/**").hasAnyRole("ADMIN","DEPURADOR")
-                //Calificicacion
+                //Calificacion
                 .antMatchers("/calificaciones/listar").hasAnyRole("ADMIN","LECTOR","CREADOR","EDITOR","DEPURADOR")
                 .antMatchers("/calificaciones/agregar").hasAnyRole("ADMIN","CREADOR")
                 .antMatchers("/calificaciones/guardar").hasAnyRole("ADMIN","CREADOR","EDITOR")
